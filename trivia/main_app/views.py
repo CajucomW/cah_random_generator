@@ -2,17 +2,17 @@ import requests
 import random
 from django.shortcuts import render
 
-response = requests.get('https://opentdb.com/api.php?amount=3')
+response = requests.get('https://opentdb.com/api.php?amount=5')
 data = response.json()
 user_answer = None
 
+correct_list = []
+# def welcome():
 
-def welcome():
-
-    print("Welcome to Our Group Project!")
-    username = input("Please enter a Username: ")
+#     print("Welcome to Our Group Project!")
+#     username = input("Please enter a Username: ")
     
-welcome()
+# welcome()
 
 def quiz():
     # while True:
@@ -31,8 +31,15 @@ def quiz():
         
         user_answer = input("Type your answer here: ")
         if user_answer in correct:
+            correct_list.append(user_answer)
             print("You got it!")
         else:
             print("Sorry. The answer is", correct + ".")
         
+        print(correct_list)
+        
 quiz()
+correct_number = 0
+correct_number = len(correct_list)
+score = (correct_number * 100) / 5
+print("You scored", score, "%")
