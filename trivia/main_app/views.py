@@ -2,7 +2,7 @@ import requests
 import random
 from django.shortcuts import render
 
-response = requests.get('https://opentdb.com/api.php?amount=5')
+response = requests.get('https://opentdb.com/api.php?amount=10')
 data = response.json()
 user_answer = None
 
@@ -37,9 +37,13 @@ def quiz():
             print("Sorry. The answer is", correct + ".")
         
         print(correct_list)
-        
+
+def scores():
+    correct_number = 0
+    correct_number = len(correct_list)
+    score = correct_number * 10
+    print("You scored", score, "%")
+
 quiz()
-correct_number = 0
-correct_number = len(correct_list)
-score = (correct_number * 100) / 5
-print("You scored", score, "%")
+
+scores()
