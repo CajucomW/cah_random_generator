@@ -12,7 +12,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">   
-  <link href="..static/vendor/bootstrap/css/ah.css" rel="stylesheet"/>
+  <link href="../static/vendor/bootstrap/css/ah.css" rel="stylesheet"/>
 
 </head>
 
@@ -50,15 +50,17 @@
 <!--{% extends "base.html" %}-->
 <!--{% block content %}-->
 <!--Trivia game here-->
+<style>
 
-<div class="row" style="background: yellow;">
+</style>
+<div class="row-1" style="background: yellow;">
     <div class="col-sm-9">
                                                             <h1>Let's get started!</h1>
-        <div class="row" style="background: blue;">
+        <div class="row-2" style="background: blue;">
             <div class="col-8 col-sm-6">
 <!--                                                    Display trivia questions here        -->
                                                     <p>{{ trivia }}</p>
-                <div class="row" style="background: orange;">
+                <div class="row-3" style="background: orange;">
                     <div class="col-4 col-sm-6">
 <!--                                                            Answers and buttons here-->
                                                             <div id="cb">
@@ -68,16 +70,16 @@
                 <div class="right">
                     <ul>
                         <li class="checkbox"><label for="option1">
-                            <input id="option1" type="checkbox" value="1" name="cb">Question 1
+                            <input id="option1" type="checkbox" value="1" name="cb">Answer 1
                         </label></li>
                         <li class="checkbox"><label for="option2">
-                            <input id="option2" type="checkbox" value="2" name="cb">Question 2
+                            <input id="option2" type="checkbox" value="2" name="cb">Answer 2
                         </label></li>
                         <li class="checkbox"><label for="option3">
-                            <input id="option3" type="checkbox" value="3" name="cb">Question 3
+                            <input id="option3" type="checkbox" value="3" name="cb">Answer 3
                         </label></li>
                         <li class="checkbox"><label for="option4">
-                            <input id="option3" type="checkbox" value="4" name="cb">Question 4
+                            <input id="option3" type="checkbox" value="4" name="cb">Answer 4
                         </label></li>
                     </ul>
                 </div>
